@@ -11,17 +11,27 @@ class AnimalTest {
 
     @BeforeEach
     void setUp() {
-        animal = new Animal("Lion");
+     animal = new Animal("Lion");
     }
 
     @Test
     public void animal_instantiatesCorrectly_true() {
+        Animal animal = new Animal("Lion");
         assertEquals(true, animal instanceof Animal);
     }
 
-//    @Test
-//    void getName_animalInstantiatesWithName_String() {
-//        Animal animal = new Animal ("Lion");
-//        assertEquals("Lion", animal.getName());
-//    }
+    @Test
+    public void getName_animalInstantiatesWithName_Lion() throws Exception {
+        assertEquals("Lion", animal.getName());
+    }
+
+    @Test
+    public void getId_animalInstantiatesWithId() throws Exception {
+        assertTrue(animal.getId() > 0);
+    }
+
+    @Test
+    void getType_animalInstantiatesWithType_Type() {
+        assertEquals("UNTHREATENED", animal.getType());
+    }
 }
