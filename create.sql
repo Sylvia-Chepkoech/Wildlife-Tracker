@@ -16,6 +16,7 @@ rangerName VARCHAR,
 locationName VARCHAR,
 sightedAt timestamp
 );
+INSERT INTO sightings(animalName, animalType, rangerName, locationName, sightedAt) VALUES ('Lion', 'xy', 'cheche', 'zone', now()) RETURNIN id;
 
 CREATE DATABASE wildlife_tracker_test;
 \c

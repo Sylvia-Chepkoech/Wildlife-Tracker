@@ -11,41 +11,36 @@ public class SightingsDao implements SightingInterface{
     @Override
     public void add(Sightings sight) {
         try (Connection con = DB.sql2o.open()) {
-            String insertQuery = "INSERT INTO sightings (animalName, animalType, rangerName, locationName, sightedAt) VALUES (:animalName, :animal_type, :rangerName, :locationName, :now()";
+            String insertQuery = "INSERT INTO sightings (animalname, animaltype, rangername, locationname, sightedat) VALUES (:animalName, :animalType, :rangerName, :locationName, now())";
             sight.Id = (int) con.createQuery(insertQuery, true)
                     .addParameter("animalName", sight.getAnimalName())
-                    .addParameter("animal_type", sight.getAnimal_type())
+                    .addParameter("animalType", sight.getAnimal_type())
                     .addParameter("rangerName", sight.getRangerName())
                     .addParameter("locationName", sight.getLocationName())
                     .executeUpdate()
                     .getKey();
         } catch (Sql2oException ex) {
-            System.out.println(ex); //"oops "we have an error!"
+
         }
     }
 
     @Override
     public Sightings getSightById(int id) {
-        return null;
+        try(Connection con = DB.sql2o.open()){
+            return con.createQuery("SELECT * FROM sightings WHERE id = :Id")
+                    .addParameter("Id", id) //key/value pair, key must match above
+                    .executeAndFetchFirst(Sightings.class); //fetch an individual item
+        }
     }
 
     @Override
     public List<Sightings> getAllSight() {
-        return null;
+        try(Connection con = DB.sql2o.open()){
+            return con.createQuery("SELECT * FROM sightings") //raw sql
+                    .executeAndFetch(Sightings.class); //fetch a list
+        }
     }
 
-    @Override
-    public void update(Sightings sight) {
 
-    }
 
-    @Override
-    public void deleteAll() {
-
-    }
-
-    @Override
-    public void delete(int id) {
-
-    }
 }

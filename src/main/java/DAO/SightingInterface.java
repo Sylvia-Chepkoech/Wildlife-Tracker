@@ -12,12 +12,6 @@ public interface SightingInterface {
     Sightings getSightById(int id);
     List<Sightings> getAllSight();
 
-    //UPDATE
-    void update(Sightings sight);
-
-    //DELETE
-    void deleteAll();
-    void delete(int id);
 
 
 }

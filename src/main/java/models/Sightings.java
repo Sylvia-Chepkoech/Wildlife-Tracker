@@ -6,22 +6,21 @@ public class Sightings {
 
     public int Id;
 
-    private String animal_type;
-    private String animalName;
-    private String rangerName;
-    private String locationName;
-    private Timestamp sightedAt;
-
-    private Location location;
-    private Ranger ranger;
+    public String animalType;
+    public String animalName;
+    public String rangerName;
+    public String locationName;
+    public Timestamp sightedAt;
 
 
-    public Sightings(String animal_type, String animalName, String rangerName, String locationName) {
-        if (rangerName.equals("") || locationName.equals("") || animal_type.equals("") || animalName.equals("")) {
+
+
+    public Sightings(String animalType, String animalName, String rangerName, String locationName) {
+        if (rangerName.equals("") || locationName.equals("") || animalType.equals("") || animalName.equals("")) {
             throw new IllegalArgumentException("Please enter the required fields");
 
         }
-        this.animal_type = animal_type;
+        this.animalType = animalType;
         this.animalName = animalName;
         this.rangerName = rangerName;
         this.locationName = locationName;
@@ -32,7 +31,7 @@ public class Sightings {
     }
 
     public String getAnimal_type() {
-        return animal_type;
+        return animalType;
     }
 
     public String getAnimalName() {
