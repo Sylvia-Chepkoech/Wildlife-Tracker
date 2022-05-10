@@ -1,6 +1,7 @@
 package models;
 
 import java.sql.Timestamp;
+import java.util.Objects;
 
 public class Sightings {
 
@@ -24,6 +25,19 @@ public class Sightings {
         this.animalName = animalName;
         this.rangerName = rangerName;
         this.locationName = locationName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Sightings)) return false;
+        Sightings sightings = (Sightings) o;
+        return Id == sightings.Id && Objects.equals(animalType, sightings.animalType) && Objects.equals(animalName, sightings.animalName) && Objects.equals(rangerName, sightings.rangerName) && Objects.equals(locationName, sightings.locationName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(Id, animalType, animalName, rangerName, locationName, sightedAt);
     }
 
     public int getId() {

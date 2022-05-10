@@ -38,6 +38,7 @@ public class AnimalDao implements AnimalInterface {
     public List<Animal> getAllAnimal() {
         try(Connection con = DB.sql2o.open()){
             return con.createQuery("SELECT * FROM animals") //raw sql
+                    .throwOnMappingFailure(false)
                     .executeAndFetch(Animal.class); //fetch a list
         }
     }
