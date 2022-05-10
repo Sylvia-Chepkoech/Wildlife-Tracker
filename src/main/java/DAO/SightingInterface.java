@@ -13,9 +13,11 @@ public interface SightingInterface {
     List<Sightings> getAllSight();
 
     //UPDATE
-//    void update(Sightings sight);
+    void update(Sightings sight);
 
     //DELETE
+    void deleteAll();
+    void delete(int id);
 
 
 
