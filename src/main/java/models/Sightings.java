@@ -3,7 +3,8 @@ package models;
 import java.sql.Timestamp;
 
 public class Sightings {
-    private int id;
+
+    public int Id;
 
     private String animal_type;
     private String animalName;
@@ -24,6 +25,30 @@ public class Sightings {
         this.animalName = animalName;
         this.rangerName = rangerName;
         this.locationName = locationName;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public String getAnimal_type() {
+        return animal_type;
+    }
+
+    public String getAnimalName() {
+        return animalName;
+    }
+
+    public String getRangerName() {
+        return rangerName;
+    }
+
+    public String getLocationName() {
+        return locationName;
+    }
+
+    public Timestamp getSightedAt() {
+        return sightedAt;
     }
 }
 

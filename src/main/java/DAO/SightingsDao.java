@@ -10,15 +10,18 @@ public class SightingsDao implements SightingInterface{
 
     @Override
     public void add(Sightings sight) {
-        try(Connection con = DB.sql2o.open()) {
-            String insertQuery = "INSERT INTO sightings (ranger_name, location) VALUES (:animalName, :animalType)";
-            animal.animalId = (int) con.createQuery(insertQuery, true)
-                    .addParameter("animalName", animal.animalName)
-                    .addParameter("animalType", animal.animalType)
+        try (Connection con = DB.sql2o.open()) {
+            String insertQuery = "INSERT INTO sightings (animalName, animalType, rangerName, locationName, sightedAt) VALUES (:animalName, :animal_type, :rangerName, :locationName, :now()";
+            sight.Id = (int) con.createQuery(insertQuery, true)
+                    .addParameter("animalName", sight.getAnimalName())
+                    .addParameter("animal_type", sight.getAnimal_type())
+                    .addParameter("rangerName", sight.getRangerName())
+                    .addParameter("locationName", sight.getLocationName())
                     .executeUpdate()
                     .getKey();
-        }catch (Sql2oException ex) {
-            System.out.println(ex); //"oops "we have an error"
+        } catch (Sql2oException ex) {
+            System.out.println(ex); //"oops "we have an error!"
+        }
     }
 
     @Override
