@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 public class Sightings {
     private int id;
-    private int rangerId;
+    private int rangerName;
     private int locationId;
     private Timestamp sightedAt;
 
@@ -13,7 +13,9 @@ public class Sightings {
 
 
     public Sightings(int rangerId, int locationId) {
-        this.rangerId = rangerId;
+        if (rangerName.equals("") || locationId.equals("")) {
+            throw new IllegalArgumentException("Please enter  name.");
+        this.rangerName = rangerName;
         this.locationId = locationId;
     }
 }
