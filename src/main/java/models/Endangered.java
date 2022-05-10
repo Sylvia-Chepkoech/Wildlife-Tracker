@@ -1,8 +1,8 @@
 package models;
 
 public class Endangered extends Animal{
-    public String health;
-    public String age;
+    private String health;
+    private String age;
     public static final String CATEGORY_TYPE = "Endangered";
 
     public Endangered(String name, String health, String age) {
@@ -31,5 +31,18 @@ public class Endangered extends Animal{
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+    //overriding endangared animal
+
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }
