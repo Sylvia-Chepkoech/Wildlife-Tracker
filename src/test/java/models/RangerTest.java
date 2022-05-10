@@ -29,7 +29,7 @@ class RangerTest {
     }
 
     @Test
-    public void newRanger_instantiatesWithContactInfo() {
+    public void newRanger_instantiatesWithContactInfo_String() {
         assertEquals("josphat678@wildliferanger.com", ranger.getContactInfo());
     }
 }

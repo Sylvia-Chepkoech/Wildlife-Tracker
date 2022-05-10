@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class Endangered extends Animal{
     private String health;
     private String age;
@@ -35,14 +37,16 @@ public class Endangered extends Animal{
 
     //overriding endangared animal
 
-
     @Override
-    public int hashCode() {
-        return super.hashCode();
+    public boolean equals(Object o) {
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
+        Endangered endangered = (Endangered) o;
+        return Objects.equals(health, endangered.health) && Objects.equals(age, endangered.age);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public int hashCode() {
+        return Objects.hash(health, age);
     }
 }
