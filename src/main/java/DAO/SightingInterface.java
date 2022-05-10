@@ -20,5 +20,4 @@ public interface SightingInterface {
     void delete(int id);
 
 
-
 }
