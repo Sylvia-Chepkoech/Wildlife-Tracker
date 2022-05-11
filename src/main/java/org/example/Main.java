@@ -124,36 +124,6 @@ public class Main {
             return new ModelAndView(model, "Rare.hbs");
         }, new HandlebarsTemplateEngine());
 
-//to ignore just incase
-//
-//        get("/normal", (request, response) ->{
-//        Map<String, Object> model = new HashMap<>();
-//        return new ModelAndView(model, "NormalForm.hbs");
-//    }); new HandlebarsTemplateEngine();
-//
-//        post("/norm", (request, response) -> {
-//            Map<String, Object> model = new HashMap<String, Object>();
-//            String animalName = request.queryParams("animalName");
-//            try {
-//                Animal thrivingAnimal = new Animal(animalName);
-//                AnimalDao thrivingAnimalDAO = new AnimalDao();
-//                thrivingAnimalDAO.add(thrivingAnimal);
-//            } catch (IllegalArgumentException exception) {
-//                System.out.println("Please enter an animal name.");
-//            }
-//            response.redirect("/animals");
-//            return new ModelAndView(model, "Animals.hbs");
-//        }, new HandlebarsTemplateEngine());
-//
-//        //display list of animals route
-//        get("/animals", (request, response) -> {
-//            Map<String, Object> model = new HashMap<String, Object>();
-//            AnimalDao thrivingAnimalDAO = new AnimalDao();
-//            model.put("animals", thrivingAnimalDAO.getAllAnimal());
-//            EndangeredDao endangeredAnimalDAO = new EndangeredDao();
-//            model.put("eAnimals", endangeredAnimalDAO.getAllEndangered());
-//            return modelAndView( model, "Animals.hbs");
-//        }, new HandlebarsTemplateEngine());
 
     }
 

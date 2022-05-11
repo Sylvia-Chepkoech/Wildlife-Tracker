@@ -1,22 +1,27 @@
 {{#partial "content"}}
     <div class="container">
         <div class ="row">
-           {{#if allsightings}}
-               {{#each rareanimals}}
 
 
-                <div class = "col-sm-2">
+                   {{#each rareanimals}}
 
-                    <p>{{name}}</p>
-                    <p>{{type}}</p>
-                    <p>{{health}}</p>
-                    <p>{{age}}</p>
+
+                <div class = "col-sm-3">
+                    <div class="card-body text-white bg-dark mb-5" style="width: 18rem;">
+
+
+                    <p class="card-title">{{name}}</p><hr>
+                    <p class="card-text">{{type}}</p>
+                    <p class="card-text">{{health}}</p>
+                    <p class="card-text">{{age}}</p>
 
 
 
                 </div>
-               {{/each}}
-           {{/if}}
+                </div>
+                   {{/each}}
+
+
         </div>
 
     </div>
