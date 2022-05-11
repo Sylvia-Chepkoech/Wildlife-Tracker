@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SightingsDaoTest {
 
-    private SightingsDao sightDao; //ignore me for now. We'll create this soon.
+    private SightingsDao sightDao;
     private Connection conn;
 
     Sql2o sql2o = new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker_test", "chechesylvia", "0718500898");
