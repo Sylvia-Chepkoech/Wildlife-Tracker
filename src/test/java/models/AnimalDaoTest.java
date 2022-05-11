@@ -51,6 +51,16 @@ class AnimalDaoTest {
     }
 
     @Test
-    void getAllAnimal() {
+    public void getAllAnimal_returnAnimals() {
+        Animal chui =new Animal("Chui");
+        Animal warthog = new Animal("warthog");
+        Animal hyena = new Animal("hyena");
+
+        animalDao.add(chui);
+        animalDao.add(warthog);
+        animalDao.add(hyena);
+
+        assertEquals(3, animalDao.getAllAnimal().size());
+
     }
 }

@@ -26,7 +26,33 @@
         </title>
     </head>
 
+{{/block}}
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">WILDLIFE TRACKER</a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav justify-content-end">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link" href="/">Animals</a>
+                <a class="nav-link" href="/Sightings">Sightings</a>
 
+            </div>
+        </div>
+    </div>
+</nav>
+{{#block "styles"}}
 
 {{/block}}
 {{#block "content"}}
@@ -34,11 +60,27 @@
 
 {{/block}}
 {{#block "footer"}}
+    <div>
+        <ol
+                class="text-warning"
+                style="
+        font-size: larger;
+        list-style: none;
+        padding: 3%;
+        padding-left: 40%;
+      "
+                style="font-weight: 1000px"
+        >
+            <li>© 2022 All Rights Reserved</li>
+
+        </ol>
+    </div>
     <!-- MDB -->
     <script
             type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
     ></script>
+
 
     </body>
     </html>

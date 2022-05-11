@@ -14,7 +14,7 @@ public class SightingsDao implements SightingInterface{
             String insertQuery = "INSERT INTO sightings (animalname, animaltype, rangername, locationname, sightedat) VALUES (:animalName, :animalType, :rangerName, :locationName, now())";
             sight.Id = (int) con.createQuery(insertQuery, true)
                     .addParameter("animalName", sight.getAnimalName())
-                    .addParameter("animalType", sight.getAnimal_type())
+                    .addParameter("animalType", sight.getAnimalType())
                     .addParameter("rangerName", sight.getRangerName())
                     .addParameter("locationName", sight.getLocationName())
                     .executeUpdate()

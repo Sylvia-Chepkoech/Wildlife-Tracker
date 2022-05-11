@@ -9,7 +9,7 @@ public class Animal {
     public String type;
 
     //creating a constant non-endangered category
-    public static final String CATEGORY_TYPE = "UNTHREATENED";
+    public static final String animalType = "UNTHREATENED";
 
 
     public Animal(String name) {
@@ -18,7 +18,7 @@ public class Animal {
             throw new IllegalArgumentException("Please enter an animal name");
         }
         this.name = name;
-        type = CATEGORY_TYPE;
+        type = animalType;
     }
 
     public String getName() {

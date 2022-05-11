@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Endangered extends Animal{
     private String health;
     private String age;
-    public static final String CATEGORY_TYPE = "Endangered";
+    public static final String animalType = "Endangered";
 
     public Endangered(String name, String health, String age) {
         super(name);
@@ -15,7 +15,7 @@ public class Endangered extends Animal{
         }
         this.health = health;
         this.age = age;
-        type = CATEGORY_TYPE;
+        type = animalType;
     }
     //get and set methods for endangered animals
 

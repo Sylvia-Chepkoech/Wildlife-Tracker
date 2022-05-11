@@ -36,3 +36,5 @@ rangerName VARCHAR,
 locationName VARCHAR,
 sightedAt timestamp
 );
+
+INSERT INTO sightings (animalName, animalType, rangerName, locationName, sightedAt) VALUES ('Lion', 'Unthreatened', 'Joe', 'Zone A', now());

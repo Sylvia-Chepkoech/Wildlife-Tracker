@@ -16,7 +16,7 @@ public class Sightings {
 
 
 
-    public Sightings(String animalType, String animalName, String rangerName, String locationName) {
+    public Sightings(String animalName, String animalType, String rangerName, String locationName) {
         if (rangerName.equals("") || locationName.equals("") || animalType.equals("") || animalName.equals("")) {
             throw new IllegalArgumentException("Please enter the required fields");
 
@@ -44,7 +44,7 @@ public class Sightings {
         return Id;
     }
 
-    public String getAnimal_type() {
+    public String getAnimalType() {
         return animalType;
     }
 
