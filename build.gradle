@@ -18,7 +18,8 @@ dependencies {
     implementation "org.slf4j:slf4j-simple:1.7.36"
     implementation 'org.sql2o:sql2o:1.6.0'
     implementation 'org.postgresql:postgresql:42.3.4'
-
+    implementation group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
+    implementation group: 'com.h2database', name: 'h2', version: '1.4.191'
 
 }
 

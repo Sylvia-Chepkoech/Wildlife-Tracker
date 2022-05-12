@@ -1,0 +1,92 @@
+{{#partial "styles"}}
+
+    <link rel='stylesheet' href='/css/index.css'>
+
+{{/partial}}
+
+{{#partial "content"}}
+
+    <div id="heading" style= "margin-top:80px">
+        <h2>WILDLIFE ANIMAL TRACKER</h2>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 d-inline-flex" style="padding-left: 20%">
+                <div class="card text-white bg-dark mb-3" style="max-width: 20rem; margin-right: 5%">
+                    <img
+                            class="card-img-top"
+                            src="/images/gorilla.jpeg"
+                            alt=""
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Unthreatened Animals</h5>
+                        <p class="card-text">
+
+                        <br>
+                        <form action="/allrare">
+                            <button type="submit" class="btn btn-warning btn-sm text-align-center">
+                                VIEW
+                            </button>
+                        </form>
+                        </p>
+                    </div>
+                </div>
+                <div class="card text-white bg-dark mb-3" style="max-width: 20rem; margin-right: 5%">
+                    <img
+                            class="card-img-top"
+                            src="/images/gorilla.jpeg"
+                            alt=""
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Endangered Animals</h5>
+                        <p class="card-text">
+                            <br>
+                        <form action="/dangerform" >
+                            <button type="submit" class="btn btn-warning btn-sm">
+                                ADD
+                            </button>
+                        </form>
+
+<!--                        <form action="/allrare" >-->
+<!--                            <button type="submit" class="btn btn-warning btn-sm">-->
+<!--                                VIEW-->
+<!--                            </button>-->
+                        </form>
+                        </p>
+                    </div>
+                </div>
+                <div class="card text-white bg-dark mb-3" style="max-width: 20rem">
+                    <img
+                            class="card-img-top"
+                            src="/images/gorilla.jpeg"
+                            alt=""
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Sightings</h5>
+                        <p class="card-text">
+                        <form action="/SightingForm" >
+                        <button type="submit" class="btn btn-warning btn-sm text-align-center">
+                            ADD
+                        </button>
+                    </form>
+                        <br>
+                        <form action="/Sightings">
+                            <button type="submit" class="btn btn-warning btn-sm text-align-center">
+                                VIEW
+                            </button>
+                        </form>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+{{/partial}}
+
+{{> layout.hbs}}
